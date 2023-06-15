@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\DashbordController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Guest\PageController;
 
 
@@ -13,7 +13,8 @@ Route::middleware(['auth','verified'])
     ->name('admin.')
     ->prefix('admin')
     ->group(function(){
-        Route::get('/',[DashbordController::class, 'index'])->name('home');
+        Route::get('/',[DashboardController::class, 'index'])->name('home');
+        Route::get('/profile',[DashboardController::class, 'profile'])->name('profile');
     });
 
 
