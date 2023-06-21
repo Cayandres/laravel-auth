@@ -86,10 +86,13 @@
                 </div>
             </div>
         </nav>
+        <div class="container">
+            <main class="">
+                @yield('content')
+            </main>
 
-        <main class="">
-            @yield('content')
-        </main>
+        </div>
+
     </div>
 </body>
 
