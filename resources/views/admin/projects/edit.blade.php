@@ -21,6 +21,8 @@
             <input type="date" class="form-control" id="creation_date" name="creation_date" value="{{ old('description',$project->creation_date )}}"></input>
         </div>
 
+        <button type="submit" class=" btn btn-primary">Modifica</button>
+
 
         </form>
 

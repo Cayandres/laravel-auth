@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container text-center">
+    <a href="{{ route('admin.project.create') }}" class="btn btn-secondary btn-lg m-4">Aggiungi Nuovo Progetto</i></a>
+</div>
 
 <table class="table">
     <thead>
@@ -20,8 +23,10 @@
           <td>{{ $project->name }}</td>
           <td>{{ $project->creation_date }}</td>
           <td>
-              <a href="{{ route('admin.project.show', $project) }}" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
-              <a href="{{ route('admin.project.create', $project) }}" class="btn btn-secondary"><i class="fa-solid fa-pencil"></i></a>
+
+              <a href="{{ route('admin.project.show', $project) }}" class="btn btn-info"><i class="fa-solid fa-eye"></i></a>
+              <a href="{{ route('admin.project.edit', $project) }}" class="btn btn-primary"><i class="fa-solid fa-pencil"></i></a>
+
           </td>
         </tr>
 
