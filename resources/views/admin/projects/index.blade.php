@@ -12,6 +12,8 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Data</th>
                 <th scope="col">Azioni</th>
+                <th scope="col">Elimina</th>
+
 
             </tr>
         </thead>

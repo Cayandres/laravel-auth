@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Admin\Project;
 use Faker\Generator as Faker;
+use App\Helpers\CustomHelper;
 
 class ProjectsTableSeeder extends Seeder
 {
@@ -19,6 +20,7 @@ class ProjectsTableSeeder extends Seeder
         for ($i=0; $i < 10; $i++) {
             $new_project = new Project();
             $new_project->name = $faker->sentence(1);
+            $new_project->slug = CustomHelper::generateUniqueSlug($new_project->name, new Project());
             $new_project->description = $faker->sentence(5);
             $new_project->creation_date = $faker->date();
             $new_project->save();

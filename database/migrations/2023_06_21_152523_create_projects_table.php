@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->date('creation_date');
+            $table->text('slug');
             $table->timestamps();
         });
     }
