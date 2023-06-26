@@ -12,6 +12,7 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Data</th>
                 <th scope="col">Azioni</th>
+                <th scope="col">Categoria</th>
                 <th scope="col">Elimina</th>
 
 
@@ -30,6 +31,10 @@
                         <a href="{{ route('admin.project.edit', $project) }}" class="btn btn-primary"><i
                                 class="fa-solid fa-pencil"></i></a>
 
+                    </td>
+
+                    <td>
+                        <div class="badge text-bg-primary">{{ $project->category->name }}</div>
                     </td>
 
                     <td>

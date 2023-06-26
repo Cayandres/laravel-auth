@@ -5,6 +5,7 @@ namespace App\Models\Admin;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Category;
 
 class Project extends Model
 {
@@ -21,4 +22,8 @@ class Project extends Model
         'image_original_name',
         'image_path'
     ];
+
+    public function category(){
+        return $this->belongsTo(Category::class);
+     }
 }
